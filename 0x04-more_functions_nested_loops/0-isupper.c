@@ -8,7 +8,7 @@
  */
 int _isupper(int c)
 {
-main.h if (c >= 'A' && c <= 'Z')
-main.h main.h return (1);
-main.h return (0);
+if (c >= 'A' && c <= 'Z')
+return (1);
+return (0);
 }
