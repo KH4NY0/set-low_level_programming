@@ -10,13 +10,13 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-0-memset.c unsigned int i;
+unsigned int i;
 
-0-memset.c i = 0;
-0-memset.c while (i < n)
-0-memset.c {
-0-memset.c 0-memset.c dest[i] = src[i];
-0-memset.c 0-memset.c i++;
-0-memset.c }
-0-memset.c return (dest);
+i = 0;
+while (i < n)
+{
+dest[i] = src[i];
+i++;
+}
+return (dest);
 }
