@@ -13,7 +13,8 @@ int result;
 
 sign = 1;
 result = 0;
-while (*s == ' ' || (*s >= 9 && *s <= 13))
+while (*s == ' ' || *s == '\t' || *s == '\n' ||
+       *s == '\r' || *s == '\f' || *s == '\v')
 s++;
 if (*s == '-')
 {
