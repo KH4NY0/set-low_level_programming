@@ -8,15 +8,15 @@
  */
 int main(int argc, char *argv[])
 {
-0-whatsmyname.c int count;
+int count;
 
-0-whatsmyname.c (void)argv;
-0-whatsmyname.c count = argc - 1;
-0-whatsmyname.c if (count < 0)
-0-whatsmyname.c 0-whatsmyname.c count = 0;
-0-whatsmyname.c if (count >= 10)
-0-whatsmyname.c 0-whatsmyname.c _putchar('0' + count / 10);
-0-whatsmyname.c _putchar('0' + count % 10);
-0-whatsmyname.c _putchar('\n');
-0-whatsmyname.c return (0);
+(void)argv;
+count = argc - 1;
+if (count < 0)
+count = 0;
+if (count >= 10)
+_putchar('0' + count / 10);
+_putchar('0' + count % 10);
+_putchar('\n');
+return (0);
 }
