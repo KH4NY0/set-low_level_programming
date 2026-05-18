@@ -10,15 +10,15 @@
  */
 size_t print_listint(const listint_t *h)
 {
-lists.h size_t count;
+size_t count;
 
-lists.h count = 0;
-lists.h while (h != NULL)
-lists.h {
-lists.h lists.h printf("%d\n", h->n);
-lists.h lists.h count++;
-lists.h lists.h h = h->next;
-lists.h }
+count = 0;
+while (h != NULL)
+{
+printf("%d\n", h->n);
+count++;
+h = h->next;
+}
 
-lists.h return (count);
+return (count);
 }
