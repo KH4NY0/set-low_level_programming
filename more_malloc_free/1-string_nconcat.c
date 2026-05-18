@@ -11,46 +11,46 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-0-malloc_checked.c char *result;
-0-malloc_checked.c unsigned int len1;
-0-malloc_checked.c unsigned int len2;
-0-malloc_checked.c unsigned int i;
-0-malloc_checked.c unsigned int j;
+char *result;
+unsigned int len1;
+unsigned int len2;
+unsigned int i;
+unsigned int j;
 
-0-malloc_checked.c len1 = 0;
-0-malloc_checked.c len2 = 0;
+len1 = 0;
+len2 = 0;
 
-0-malloc_checked.c if (s1 != NULL)
-0-malloc_checked.c 0-malloc_checked.c while (s1[len1] != '\0')
-0-malloc_checked.c 0-malloc_checked.c 0-malloc_checked.c len1++;
+if (s1 != NULL)
+while (s1[len1] != '\0')
+len1++;
 
-0-malloc_checked.c if (s2 != NULL)
-0-malloc_checked.c 0-malloc_checked.c while (s2[len2] != '\0')
-0-malloc_checked.c 0-malloc_checked.c 0-malloc_checked.c len2++;
+if (s2 != NULL)
+while (s2[len2] != '\0')
+len2++;
 
-0-malloc_checked.c if (n >= len2)
-0-malloc_checked.c 0-malloc_checked.c n = len2;
+if (n >= len2)
+n = len2;
 
-0-malloc_checked.c result = malloc(sizeof(char) * (len1 + n + 1));
-0-malloc_checked.c if (result == NULL)
-0-malloc_checked.c 0-malloc_checked.c return (NULL);
+result = malloc(sizeof(char) * (len1 + n + 1));
+if (result == NULL)
+return (NULL);
 
-0-malloc_checked.c i = 0;
-0-malloc_checked.c while (i < len1)
-0-malloc_checked.c {
-0-malloc_checked.c 0-malloc_checked.c result[i] = s1[i];
-0-malloc_checked.c 0-malloc_checked.c i++;
-0-malloc_checked.c }
+i = 0;
+while (i < len1)
+{
+result[i] = s1[i];
+i++;
+}
 
-0-malloc_checked.c j = 0;
-0-malloc_checked.c while (j < n)
-0-malloc_checked.c {
-0-malloc_checked.c 0-malloc_checked.c result[i] = s2[j];
-0-malloc_checked.c 0-malloc_checked.c i++;
-0-malloc_checked.c 0-malloc_checked.c j++;
-0-malloc_checked.c }
+j = 0;
+while (j < n)
+{
+result[i] = s2[j];
+i++;
+j++;
+}
 
-0-malloc_checked.c result[i] = '\0';
+result[i] = '\0';
 
-0-malloc_checked.c return (result);
+return (result);
 }
